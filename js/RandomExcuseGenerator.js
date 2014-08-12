@@ -104,8 +104,7 @@ $(document).ready(function() {
 	var putInSearchBox = function(excuse) {
 
 		debugger;
-		
-		
+
 
 
 	    $("#excuseBox").val(excuse);
