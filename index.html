@@ -1,53 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style type="text/css">
-    option {
-      text-align: center;
-    }
-
-  </style>
   <meta charset="utf-8">
-  <title>Random Excuse Generator</title>
+  <title>The Random Excuse Generator Final</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/codiqa.ext.min.css" rel="stylesheet">
+  <link href="css/jquery.mobile-1.3.1.min.css" rel="stylesheet">
 
-  <script src="js/scripts.js"></script>
-  <script src="js/RandomExcuseGenerator.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.mobile-1.3.1.min.js"></script>
+  <script src="js/codiqa.ext.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+  <script src="js/the-random-excuse-generator-final.js"></script>
 </head>
 <body>
-  <div data-role="page" data-control-title="Home" id="page1">
-      <div data-theme="a" data-role="header">
-          <h1>
+  <div data-role="page" data-control-title="True home" id="page4">
+      <div data-role="panel" id="panel1" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Menu
+              </li>
+              <li data-theme="a">
+                  <a href="#page6" data-transition="slideup">
+                      Add excuse
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#page1" data-transition="slidedown">
+                      Excuses
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="c" data-role="header">
+          <h3>
+              Excuses Excuses
+          </h3>
+      </div>
+      <div data-role="content">
+          <a data-controltype="panelbutton" data-role="button" data-theme="e" href="#panel1"
+          data-icon="bars" data-iconpos="left">
+              Menu
+          </a>
+          <div style="" data-controltype="image">
+              <img style="width: 300px; height: 450px" src="http://holistichealthdaily.com/wp-content/uploads/2012/04/cartoon-kids_boy_liar_with_arms.jpg">
+          </div>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Excuses" id="page1">
+      <div data-theme="d" data-role="header">
+          <h3>
               Random Excuse Generator
-          </h1>
+          </h3>
+      </div>
+      <div data-role="content">
           <div data-role="fieldcontain" data-controltype="selectmenu">
-              <select id="myExcuseCategory">
+              <label for="myExcuseCategory">
+                  Choose: Excuse type
+              </label>
+              <select id="myExcuseCategory" name="">
                   <option value="0">
-                      Home Work Excuse
+                      Homework Excuse
                   </option>
                   <option value="1">
-                      Late For Work Excuses
+                      Late For Work Excuse
                   </option>
                   <option value="2">
-                      Late For School Excuses
+                      Late For School Excuse
                   </option>
                   <option value="3">
-                      Did not do chores
+                      Didnt Do Chores Excuse
                   </option>
               </select>
           </div>
-      </div>
-      <div data-role="content">
-          <button id="randomButton">Random</button>
-          <h2>
-          <form onclick="console.log("randomhomeWorkExcusesArray[i]")">
-          </form>
+          <a id="randomButton" data-role="button" href="#page1">
+              New Excuse
+          </a>
+          <h2 id="excuseH">
           </h2>
-           </div>
+          <h2 id="excuseH">
+          </h2>
+          <h2>
+          </h2>
+          <h2>
+          </h2>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page4" data-transition="slidefade" data-theme="" data-icon="home">
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="#page6" data-transition="pop" data-theme="" data-icon="plus">
+                      Add Excuse
+                  </a>
+              </li>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="grid">
+                      Excuses
+                  </a>
+              </li>
+          </ul>
+      </div>
   </div>
-</body>
-</html>
