@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	
+
 	var getIndexOfOptionsList = function() {
 
 		debugger;
@@ -127,15 +127,5 @@ $(document).ready(function() {
 	$("#randomButton").click(generateRandomExcuse);
 
 
-
-});
-
-
-var addSearchQueryToList = function() {
-    var searchString = $("#commentQuery").val();
-    $("#comments").append("<li>" + searchString + "</li>");
-  };
-
-  $("#commentButton").click(addSearchQueryToList);
 
 });
