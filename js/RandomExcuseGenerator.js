@@ -129,3 +129,13 @@ $(document).ready(function() {
 
 
 });
+
+
+var addSearchQueryToList = function() {
+    var searchString = $("#commentQuery").val();
+    $("#comments").append("<li>" + searchString + "</li>");
+  };
+
+  $("#commentButton").click(addSearchQueryToList);
+
+});
